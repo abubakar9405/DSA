@@ -42,7 +42,8 @@ int pop(/*NO ARGS*/){
     }    
 }
  T peek(){
-return arr[top];
+    cout<<arr[top];
+    return arr[top];
 }
 void DISPLAY(){
     for (int  i = 0; i <= top; i++)
@@ -51,19 +52,56 @@ void DISPLAY(){
     }
     cout<<"\n";
 }
+bool palindrome_Checker(){
+int front=this->top,rear=0;
+
+while(front>rear){
+if (arr[front]!=arr[rear])
+{
+    return false;
+}
+front--;
+rear++;
+}
+return true;
+}
 };
-int main(){
-stack<int>obj(6);
-obj.push(1);
-obj.push(2);
-obj.push(3);
-obj.push(4);
-obj.push(5);
-obj.push(6);
-obj.DISPLAY();
-obj.push(1);//over flow condition...
-obj.pop();
-obj.pop();
-cout<<"displating stack after some popping \n";
-obj.DISPLAY();
+int main() {
+    // Create a stack of size 10
+    stack<int> s(10);
+
+    // Example 1: Palindrome case
+    s.push(1);
+    s.push(0);
+    s.push(0);
+    s.push(0);
+    s.push(1);
+
+    cout << "Stack contents: ";
+    s.DISPLAY();  // Display stack contents
+
+    if (s.palindrome_Checker()) {
+        cout << "The stack is a palindrome." << endl;
+    } else {
+        cout << "The stack is NOT a palindrome." << endl;
+    }
+
+    // Example 2: Non-palindrome case
+    stack<char> s2(10);
+    s2.push('r');
+    s2.push('a');
+    s2.push('c');
+    s2.push('e');
+    s2.push('r');
+
+    cout << "Stack contents: ";
+    s2.DISPLAY();  // Display stack contents
+
+    if (s2.palindrome_Checker()) {
+        cout << "The stack is a palindrome." << endl;
+    } else {
+        cout << "The stack is NOT a palindrome." << endl;
+    }
+
+    return 0;
 }
