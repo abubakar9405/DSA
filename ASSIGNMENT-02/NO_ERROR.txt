@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test HTML File</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <h1>Testing HTML Parser</h1>
+    <p>This is a paragraph.</p>
+    <img src="image.jpg" alt="Sample Image" />
+    <a href="https://example.com">Example Link</a>
+  </body>
+</html>
+

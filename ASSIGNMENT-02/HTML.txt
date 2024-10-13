@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Page</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1>Welcome to the Test Page<h1>  <!-- Unclosed h1 tag -->
+    <p>This is a <strong>bold</strong> statement.</p>
+    <p>Here is an image without a closing tag: <img src="image.jpg"></p>  <!-- Missing closing slash for img tag -->
+    <div>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>  <!-- Unclosed ul tag -->
+    </div>
+  </body>
+</html>
